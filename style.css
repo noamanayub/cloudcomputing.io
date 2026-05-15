@@ -1049,4 +1049,13 @@ a {
   .nav-links a {
     cursor: pointer;
   }
+
+  .lecture-page .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lecture-page .info-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(33, 128, 195, 0.35);
+  }
 }
