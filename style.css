@@ -725,6 +725,12 @@ a {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(111, 186, 255, 0.45);
   box-shadow: 0 12px 30px rgba(7, 12, 18, 0.45);
+  transition: none;
+}
+
+.lecture-page .info-card:hover {
+  border-color: rgba(111, 186, 255, 0.45);
+  box-shadow: 0 12px 30px rgba(7, 12, 18, 0.45);
 }
 
 .lecture-page .mini-card.light p {
