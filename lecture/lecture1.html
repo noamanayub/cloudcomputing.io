@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture 1 - Cloud Computing Basics</title>
+  <link rel="icon" type="image/png" href="../images/logo-transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="lecture-page">
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-logo" data-hover>
+      <span>ARISE ABILITY</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-hover>Home</a></li>
+      <li><a href="../about.html" data-hover>About Us</a></li>
+      <li><a href="../learning.html" data-hover>Learning</a></li>
+      <li><a href="../roadmap.html" data-hover>Roadmap</a></li>
+    </ul>
+    <button class="nav-mobile-btn" data-hover>Menu</button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span class="marquee-content"> LECTURE 1 - CLOUD BASICS - THEORY NOTES - </span>
+        <span class="marquee-content"> LECTURE 1 - CLOUD BASICS - THEORY NOTES - </span>
+      </div>
+      <div class="marquee-track">
+        <span class="marquee-content"> DEFINITIONS - CHARACTERISTICS - USE CASES - </span>
+        <span class="marquee-content"> DEFINITIONS - CHARACTERISTICS - USE CASES - </span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">LECTURE 1.<br><span>CLOUD COMPUTING BASICS.</span></h1>
+      <p class="hero-subtitle">Simple answers with real world examples to help you understand the foundation of cloud computing.</p>
+      <a href="#lecture-content" class="btn-primary" data-hover>Start Reading</a>
+    </div>
+  </section>
+
+  <section class="lecture-section" id="lecture-content">
+    <div class="section-header">
+      <h2 class="section-title">Lecture Questions and Answers</h2>
+      <p class="section-subtitle">Clear, student friendly answers with simple examples.</p>
+    </div>
+
+    <div class="lecture-list">
+      <details class="lecture-card" open>
+        <summary>1. What is cloud computing, and how does it differ from traditional on premise computing?</summary>
+        <ol>
+          <li>Cloud computing means using someone else's computers over the internet instead of buying your own servers.</li>
+          <li>On premise means you buy, install, and maintain servers inside your own building.</li>
+          <li>Cloud is rented and flexible, on premise is owned and fixed.</li>
+        </ol>
+        <p class="example-highlight">Example: Renting a car when you need it (cloud) versus buying and maintaining a car yourself (on premise).</p>
+        <div class="metric-row">
+          <div class="metric-card">
+            <div class="metric-label">Market Size (2024)</div>
+            <div class="metric-value">$680B+</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Projected (2030)</div>
+            <div class="metric-value">$1.2T</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Enterprises on Cloud</div>
+            <div class="metric-value">94%</div>
+          </div>
+        </div>
+        <h3 class="subsec">Three core service models</h3>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>IaaS — Infrastructure as a Service</h4>
+            <p>Provides raw computing infrastructure: virtual machines, storage, networking. You manage the OS and apps. Examples: AWS EC2, Azure VMs, Google Compute Engine.</p>
+          </div>
+          <div class="mini-card">
+            <h4>PaaS — Platform as a Service</h4>
+            <p>Provides a ready-made platform to build and deploy apps without managing the underlying hardware. Examples: Heroku, Google App Engine, Azure App Service.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>SaaS — Software as a Service</h4>
+            <p>Fully hosted software accessed via browser. No installation needed. Examples: Gmail, Salesforce, Microsoft 365, Slack, Zoom.</p>
+          </div>
+        </div>
+        <h3 class="subsec">Four deployment models</h3>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>☁️ Public Cloud</h4>
+            <p>Shared infrastructure, owned by third-party (AWS, Azure, GCP). Cost-efficient and scalable.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>🏢 Private Cloud</h4>
+            <p>Dedicated cloud environment for a single organization. More control and security.</p>
+          </div>
+          <div class="mini-card">
+            <h4>🔀 Hybrid Cloud</h4>
+            <p>Combination of public and private. Workloads shift between environments as needed.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>🤝 Multi-Cloud</h4>
+            <p>Using multiple cloud providers simultaneously to avoid vendor lock-in.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>2. List the main characteristics of cloud computing such as elasticity, scalability, and on demand service.</summary>
+        <ol>
+          <li>On demand service: resources are available instantly when needed.</li>
+          <li>Elasticity: resources can grow or shrink automatically.</li>
+          <li>Scalability: you can serve more users without buying new hardware.</li>
+          <li>Pay as you go: you pay only for what you use.</li>
+          <li>Broad access: data and apps are available from any device online.</li>
+        </ol>
+        <p class="example-highlight">Example: During exams, a learning app adds more servers for extra students, then reduces them after exams.</p>
+      </details>
+
+      <details class="lecture-card">
+        <summary>3. Why do organizations migrate to the cloud?</summary>
+        <ol>
+          <li>To reduce upfront costs for servers and infrastructure.</li>
+          <li>To scale faster when users grow.</li>
+          <li>To avoid maintenance and hardware failures.</li>
+        </ol>
+        <p class="example-highlight">Example: An online store scales up for a sale day and pays only for the extra capacity.</p>
+      </details>
+
+      <details class="lecture-card">
+        <summary>4. Explain the concept of pay as you go billing.</summary>
+        <ol>
+          <li>You pay only for the resources you used.</li>
+          <li>If you use less, your bill is lower. If you use more, your bill is higher.</li>
+        </ol>
+        <p class="example-highlight">Example: Like an electricity bill, you pay for the units you consume each month.</p>
+      </details>
+
+      <details class="lecture-card">
+        <summary>5. Describe real world examples where cloud computing is used.</summary>
+        <ol>
+          <li>Streaming: Netflix and YouTube deliver video through cloud servers.</li>
+          <li>Storage: Google Drive and Dropbox store files in the cloud.</li>
+          <li>Meetings: Zoom and Microsoft Teams run on cloud infrastructure.</li>
+          <li>Banking: banks use cloud for fraud checks and secure transactions.</li>
+        </ol>
+        <p class="example-highlight">Example: A student uploads notes to Google Drive and accesses them from any device.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="section-header">
+      <h2 class="section-title">Quick Summary</h2>
+      <p class="section-subtitle">Use these quick points to revise before exams.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Cloud = Rent</h4>
+        <p>You rent computing resources online instead of buying servers.</p>
+      </div>
+      <div class="info-card">
+        <h4>Elastic and Scalable</h4>
+        <p>Resources grow or shrink based on demand.</p>
+      </div>
+      <div class="info-card">
+        <h4>Pay as you go</h4>
+        <p>Bills depend on actual usage, like a utility.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" id="cloud-fields">
+    <div class="section-header">
+      <h2 class="section-title">Cloud Computing in Different Fields</h2>
+      <p class="section-subtitle">How cloud supports app development, web development, cybersecurity, and more.</p>
+    </div>
+    <div class="mini-card-grid">
+      <div class="mini-card light">
+        <h4>App Development</h4>
+        <p>Apps use cloud databases, push notifications, and file storage.</p>
+        <p class="example-highlight">Example: A mobile app stores user profiles in Firebase so data syncs across devices.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Web Development</h4>
+        <p>Websites rely on cloud hosting, APIs, and content delivery networks.</p>
+        <p class="example-highlight">Example: A portfolio site is hosted on AWS and serves images via a CDN.</p>
+      </div>
+      <div class="mini-card light">
+        <h4>Cybersecurity</h4>
+        <p>Cloud provides IAM, encryption, monitoring, and threat detection tools.</p>
+        <p class="example-highlight">Example: A company uses AWS GuardDuty to detect suspicious logins.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Data Science</h4>
+        <p>Big data processing and ML training use cloud GPUs and data lakes.</p>
+        <p class="example-highlight">Example: A team trains a model on cloud GPUs instead of buying hardware.</p>
+      </div>
+      <div class="mini-card light">
+        <h4>DevOps</h4>
+        <p>CI/CD pipelines and infrastructure automation run on cloud platforms.</p>
+        <p class="example-highlight">Example: GitHub Actions deploys updates to a cloud server automatically.</p>
+      </div>
+      <div class="mini-card">
+        <h4>IoT</h4>
+        <p>IoT devices send sensor data to the cloud for processing and alerts.</p>
+        <p class="example-highlight">Example: Smart home sensors store data in the cloud for real-time dashboards.</p>
+      </div>
+      <div class="mini-card light">
+        <h4>Gaming</h4>
+        <p>Multiplayer games and cloud gaming need low latency cloud servers.</p>
+        <p class="example-highlight">Example: A game uses cloud servers to match players globally.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Healthcare</h4>
+        <p>Hospitals store medical records securely and enable telemedicine.</p>
+        <p class="example-highlight">Example: Doctors access patient records in the cloud during video visits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" id="ai-cloud">
+    <div class="section-header">
+      <h2 class="section-title">AI + Cloud Computing</h2>
+      <p class="section-subtitle">Cloud makes AI possible at scale with GPUs, storage, and AI services.</p>
+    </div>
+    <div class="mini-card-grid">
+      <div class="mini-card">
+        <h4>GPU Power</h4>
+        <p>AI training needs heavy compute. Cloud rents GPUs by the hour.</p>
+        <p class="example-highlight">Example: A student trains a model on cloud GPU instead of buying one.</p>
+      </div>
+      <div class="mini-card light">
+        <h4>AI Services</h4>
+        <p>Use ready APIs for vision, speech, and chat without training models.</p>
+        <p class="example-highlight">Example: A school app uses a speech-to-text API for lectures.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Scalable AI Apps</h4>
+        <p>Cloud scales AI apps to thousands of users safely.</p>
+        <p class="example-highlight">Example: A chatbot answers student questions 24/7.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" id="research-gaps">
+    <div class="section-header">
+      <h2 class="section-title">Research Gaps in Cloud Computing</h2>
+      <p class="section-subtitle">Open problems where students can build projects or research ideas.</p>
+    </div>
+    <div class="mini-card-grid">
+      <div class="mini-card light">
+        <h4>Security and Privacy</h4>
+        <p>Better ways to protect data in multi-tenant environments.</p>
+        <p class="example-highlight">Example: Research safer encryption for cloud storage.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Green Cloud</h4>
+        <p>Reduce energy use in data centers and AI workloads.</p>
+        <p class="example-highlight">Example: Schedule workloads when renewable energy is high.</p>
+      </div>
+      <div class="mini-card light">
+        <h4>Cost Prediction</h4>
+        <p>Tools that forecast cloud bills and prevent cost spikes.</p>
+        <p class="example-highlight">Example: Build a budget alert dashboard.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Edge Computing</h4>
+        <p>Move cloud closer to devices for low latency apps.</p>
+        <p class="example-highlight">Example: Process IoT data locally before sending to cloud.</p>
+      </div>
+      <div class="mini-card light">
+        <h4>Multi-Cloud Interoperability</h4>
+        <p>Make apps portable across AWS, Azure, and GCP.</p>
+        <p class="example-highlight">Example: Study standard APIs that reduce vendor lock-in.</p>
+      </div>
+      <div class="mini-card">
+        <h4>Serverless Limitations</h4>
+        <p>Fix cold starts and improve stateful workloads.</p>
+        <p class="example-highlight">Example: Experiment with warm-start strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand-line">Master the Basics. Build the Future.</div>
+    <div class="footer-links">
+      <a href="../index.html" data-hover>Home</a>
+      <a href="../about.html" data-hover>About Us</a>
+      <a href="../learning.html" data-hover>Learning</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/noaman-ayub" class="footer-social" data-hover aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@AriseAbility" class="footer-social" data-hover aria-label="YouTube">YT</a>
+      <a href="https://github.com/noamanayub" class="footer-social" data-hover aria-label="GitHub">GH</a>
+    </div>
+    <div class="footer-copy">Copyright 2026 Arise Ability. All rights reserved.</div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

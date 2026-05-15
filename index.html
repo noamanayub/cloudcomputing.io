@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arise Ability - Home</title>
+  <link rel="icon" type="image/png" href="images/logo-transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo" data-hover>
+      <span>ARISE ABILITY</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-hover>Home</a></li>
+      <li><a href="about.html" data-hover>About Us</a></li>
+      <li><a href="learning.html" data-hover>Learning</a></li>
+      <li><a href="roadmap.html" data-hover>Roadmap</a></li>
+    </ul>
+    <button class="nav-mobile-btn" data-hover>Menu</button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span class="marquee-content"> LEARN CLOUD - BUILD FUTURE - SERVERLESS - DEPLOY - </span>
+        <span class="marquee-content"> LEARN CLOUD - BUILD FUTURE - SERVERLESS - DEPLOY - </span>
+      </div>
+      <div class="marquee-track">
+        <span class="marquee-content"> SCALABILITY - CONTAINERS - AUTOMATION - SECURITY - </span>
+        <span class="marquee-content"> SCALABILITY - CONTAINERS - AUTOMATION - SECURITY - </span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">CLOUD UNLOCKED.<br><span>MASTER THE FUTURE.</span></h1>
+      <p class="hero-subtitle">Arise Ability delivers lecture based cloud learning with theory questions, clear explanations, and a focused learning path.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">12+</div>
+          <div class="stat-label">Lecture Modules</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">100+</div>
+          <div class="stat-label">Theory Questions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Course Alignment</div>
+        </div>
+      </div>
+      <a href="learning.html" class="btn-primary" data-hover>Start Learning Now</a>
+    </div>
+  </section>
+
+  <section class="tutorials" id="tutorials">
+    <div class="section-header">
+      <h2 class="section-title">Learn by Doing</h2>
+      <p class="section-subtitle">Explore the core modules and jump straight into the lecture that matches your course flow.</p>
+    </div>
+    <div class="tutorials-grid">
+      <a class="tutorial-card" href="learning.html#lecture-1" data-hover>
+        <img src="images/card-what-is-cloud.jpg" alt="Lecture 1">
+        <div class="tutorial-card-overlay">
+          <div class="tutorial-card-num">01</div>
+          <div class="tutorial-card-title">Cloud Basics</div>
+          <div class="tutorial-card-desc">Definitions, characteristics, and why cloud matters for modern businesses.</div>
+        </div>
+      </a>
+      <a class="tutorial-card" href="learning.html#lecture-2" data-hover>
+        <img src="images/card-service-models.jpg" alt="Lecture 2">
+        <div class="tutorial-card-overlay">
+          <div class="tutorial-card-num">02</div>
+          <div class="tutorial-card-title">Service Models</div>
+          <div class="tutorial-card-desc">IaaS, PaaS, and SaaS explained with responsibilities and examples.</div>
+        </div>
+      </a>
+      <a class="tutorial-card" href="learning.html#lecture-3" data-hover>
+        <img src="images/card-deployment.jpg" alt="Lecture 3">
+        <div class="tutorial-card-overlay">
+          <div class="tutorial-card-num">03</div>
+          <div class="tutorial-card-title">Deployments</div>
+          <div class="tutorial-card-desc">Public, private, and hybrid strategies for real world workloads.</div>
+        </div>
+      </a>
+      <a class="tutorial-card" href="learning.html#lecture-6" data-hover>
+        <img src="images/card-why-cloud.jpg" alt="Lecture 6">
+        <div class="tutorial-card-overlay">
+          <div class="tutorial-card-num">04</div>
+          <div class="tutorial-card-title">Security</div>
+          <div class="tutorial-card-desc">Shared responsibility, IAM, encryption, and security risks.</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="info-section" id="about">
+    <div class="section-header">
+      <h2 class="section-title">Why Arise Ability</h2>
+      <p class="section-subtitle">Arise Ability is an ed-tech organization which offer this amazing cloud computing notes.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Lecture First Structure</h4>
+        <p>Every topic maps directly to lectures so revision stays aligned with classroom delivery.</p>
+      </div>
+      <div class="info-card">
+        <h4>Focused Theory</h4>
+        <p>Questions are curated to reinforce definitions, models, and core decision points.</p>
+      </div>
+      <div class="info-card">
+        <h4>Brand Consistency</h4>
+        <p>Dark, 3D inspired visuals powered by the brand colors for a premium learning feel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="media-section" id="intellitools">
+    <div class="section-header">
+      <h2 class="section-title">IntelliToolsAI</h2>
+      <p class="section-subtitle">For AI tools and courses of Arise Ability, visit <a class="highlight-link" href="https://intellitoolsai.app/" target="_blank" rel="noopener">intellitoolsai.app</a>.</p>
+    </div>
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="IntelliToolsai/ai-tools.png" alt="IntelliToolsAI tools overview">
+        <div class="media-card-content">
+          <h4>AI Tools</h4>
+          <p>Explore curated AI tools that support faster learning, research, and cloud study workflows.</p>
+        </div>
+      </div>
+      <div class="media-card">
+        <img src="IntelliToolsai/courses.png" alt="IntelliToolsAI courses">
+        <div class="media-card-content">
+          <h4>Courses</h4>
+          <p>Access focused AI courses designed to complement cloud computing notes.</p>
+        </div>
+      </div>
+      <div class="media-card">
+        <img src="IntelliToolsai/home.png" alt="IntelliToolsAI home screen">
+        <div class="media-card-content">
+          <h4>Platform Hub</h4>
+          <p>Discover the full IntelliToolsAI platform and stay updated on new releases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="media-section" id="media">
+    <div class="section-header">
+      <h2 class="section-title">Brand Presence</h2>
+        <p class="section-subtitle">Official visuals and learning highlights shared across platforms. Visit <a class="highlight-link" href="https://www.youtube.com/@AriseAbility" target="_blank" rel="noopener">youtube.com/@AriseAbility</a>.</p>
+    </div>
+    <div class="media-grid">
+      <div class="media-card">
+        <img src="youtube/logo-yt.jpg" alt="Arise Ability YouTube logo">
+        <div class="media-card-content">
+          <h4>YouTube Channel</h4>
+          <p>Short theory explainers, lecture recaps, and quick revision clips to reinforce every module.</p>
+        </div>
+      </div>
+      <div class="media-card">
+        <img src="youtube/youtube.png" alt="Arise Ability YouTube screenshot">
+        <div class="media-card-content">
+          <h4>Channel Highlights</h4>
+          <p>Snapshots from the Arise Ability YouTube experience with lecture focused content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand-line">Master the Basics. Build the Future.</div>
+    <div class="footer-links">
+      <a href="index.html" data-hover>Home</a>
+      <a href="about.html" data-hover>About Us</a>
+      <a href="learning.html" data-hover>Learning</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/noaman-ayub" class="footer-social" data-hover aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@noamanayub" class="footer-social" data-hover aria-label="YouTube">YT</a>
+      <a href="https://github.com/noamanayub" class="footer-social" data-hover aria-label="GitHub">GH</a>
+    </div>
+    <div class="footer-copy">Copyright 2026 Arise Ability. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

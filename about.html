@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arise Ability - About Us</title>
+  <link rel="icon" type="image/png" href="images/logo-transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo" data-hover>
+      <span>ARISE ABILITY</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-hover>Home</a></li>
+      <li><a href="about.html" data-hover>About Us</a></li>
+      <li><a href="learning.html" data-hover>Learning</a></li>
+      <li><a href="roadmap.html" data-hover>Roadmap</a></li>
+    </ul>
+    <button class="nav-mobile-btn" data-hover>Menu</button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span class="marquee-content"> ARISE ABILITY - ABOUT US - LEARN CLOUD - </span>
+        <span class="marquee-content"> ARISE ABILITY - ABOUT US - LEARN CLOUD - </span>
+      </div>
+      <div class="marquee-track">
+        <span class="marquee-content"> THEORY FIRST - STUDENT FOCUSED - BRAND BUILT - </span>
+        <span class="marquee-content"> THEORY FIRST - STUDENT FOCUSED - BRAND BUILT - </span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">ABOUT ARISE.<br><span>BUILT FOR STUDENTS.</span></h1>
+      <p class="hero-subtitle">Arise Ability was created to make cloud computing theory simple, structured, and aligned with the lecture flow.</p>
+      <a href="learning.html" class="btn-primary" data-hover>Explore Learning</a>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="section-header">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="section-subtitle">Deliver focused cloud education with lecture based theory questions and a premium learning experience.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Clarity</h4>
+        <p>Clear explanations and targeted questions help students build a strong foundation.</p>
+      </div>
+      <div class="info-card">
+        <h4>Consistency</h4>
+        <p>Unified design and brand tone keep every page familiar and easy to navigate.</p>
+      </div>
+      <div class="info-card">
+        <h4>Confidence</h4>
+        <p>Students move from basics to advanced topics with steady progression and support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-section">
+    <div class="founder-grid">
+      <div class="founder-card">
+        <img src="images/noaman-ayub.jpg" alt="Noaman Ayub">
+        <div class="founder-name">Noaman Ayub</div>
+        <div class="founder-role">Founder, Arise Ability</div>
+        <p class="section-subtitle" style="margin: 0 0 16px 0;">Focused on making cloud education clean, structured, and student friendly.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/noamanayub" target="_blank" rel="noopener" data-hover>LinkedIn</a>
+          <a href="https://github.com/noamanayub" target="_blank" rel="noopener" data-hover>GitHub</a>
+          <a href="https://www.youtube.com/@noamanayub" target="_blank" rel="noopener" data-hover>YouTube</a>
+        </div>
+      </div>
+      <div>
+        <div class="section-header" style="text-align:left; margin-bottom: 24px;">
+          <h2 class="section-title">The Story</h2>
+          <p class="section-subtitle" style="margin: 0;">Arise Ability started as a simple idea: give students a clear path to master cloud theory before moving to hands on labs. The platform now focuses on lecture based revision, keeping every lesson aligned with classroom goals.</p>
+        </div>
+        <div class="info-card">
+          <h4>Brand Vision</h4>
+          <p>The 3D inspired design with Arise Ability colors brings energy and focus to every learning session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand-line">Master the Basics. Build the Future.</div>
+    <div class="footer-links">
+      <a href="index.html" data-hover>Home</a>
+      <a href="about.html" data-hover>About Us</a>
+      <a href="learning.html" data-hover>Learning</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/noaman-ayub" class="footer-social" data-hover aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@noamanayub" class="footer-social" data-hover aria-label="YouTube">YT</a>
+      <a href="https://github.com/noamanayub" class="footer-social" data-hover aria-label="GitHub">GH</a>
+    </div>
+    <div class="footer-copy">Copyright 2026 Arise Ability. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

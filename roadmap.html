@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arise Ability - Roadmap</title>
+  <link rel="icon" type="image/png" href="images/logo-transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo" data-hover>
+      <span>ARISE ABILITY</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-hover>Home</a></li>
+      <li><a href="about.html" data-hover>About Us</a></li>
+      <li><a href="learning.html" data-hover>Learning</a></li>
+      <li><a href="roadmap.html" data-hover>Roadmap</a></li>
+    </ul>
+    <button class="nav-mobile-btn" data-hover>Menu</button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span class="marquee-content"> ROADMAP - BEGINNER TO EXPERT - CLOUD CAREER - </span>
+        <span class="marquee-content"> ROADMAP - BEGINNER TO EXPERT - CLOUD CAREER - </span>
+      </div>
+      <div class="marquee-track">
+        <span class="marquee-content"> LINUX - NETWORKING - AWS - DEVOPS - SECURITY - </span>
+        <span class="marquee-content"> LINUX - NETWORKING - AWS - DEVOPS - SECURITY - </span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">CLOUD ROADMAP.<br><span>BEGINNER TO EXPERT.</span></h1>
+      <p class="hero-subtitle">A clear step-by-step roadmap to become a cloud engineer, from fundamentals to advanced specialization.</p>
+      <a href="#roadmap-content" class="btn-primary" data-hover>Explore the Roadmap</a>
+    </div>
+  </section>
+
+  <section class="lecture-section" id="roadmap-content">
+    <div class="section-header">
+      <h2 class="section-title">Cloud Computing Roadmap</h2>
+      <p class="section-subtitle">Follow the phases in order and build real projects along the way.</p>
+    </div>
+
+    <div class="lecture-list">
+      <details class="lecture-card" open>
+        <summary>Phase 0: Mindset and Learning Strategy</summary>
+        <ol>
+          <li>Focus on learning by building.</li>
+          <li>Practice daily, even 1–2 hours consistently.</li>
+          <li>Use free tier cloud accounts.</li>
+          <li>Learn concepts first, then tools.</li>
+          <li>Build projects after every major topic.</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 1: Computer and Internet Fundamentals</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>How Computers Work</h4>
+            <p>CPU, RAM, Storage, Processes, Threads, File Systems, Client vs Server, Command Line Basics.</p>
+            <p class="example-highlight">Practice Task: Install Ubuntu in VirtualBox and learn terminal commands.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Networking Fundamentals</h4>
+            <p>LAN, WAN, IP Addressing, DNS, MAC, Ports, TCP vs UDP, Routing, NAT, Firewalls, VPN.</p>
+            <p class="example-highlight dark">Practice Task: Use ping, traceroute, nslookup, and Wireshark packet capture.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 2: Operating Systems and Linux</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Linux Fundamentals</h4>
+            <p>File system, permissions, users, processes, services, package management, shell scripting, SSH.</p>
+            <p class="example-highlight dark">Practice Task: Configure an Ubuntu server, create scripts, SSH into remote machines.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Operating System Concepts</h4>
+            <p>Kernel, memory management, process scheduling, system calls, virtual memory, storage management.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 3: Programming for Cloud Engineers</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Recommended Languages</h4>
+            <p>Beginner: Python. Optional later: JavaScript (Node.js), Go, Java.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Python for Cloud</h4>
+            <p>Variables, functions, loops, OOP basics, file handling, APIs, JSON, automation scripts.</p>
+            <p class="example-highlight dark">Libraries: boto3, requests, paramiko.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 4: Virtualization and Cloud Foundations</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Virtualization</h4>
+            <p>Hypervisors, Type 1 vs Type 2, virtual machines, snapshots, resource allocation.</p>
+            <p class="example-highlight dark">Practice Task: Create VMs in VirtualBox and install multiple OS environments.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Cloud Computing Basics</h4>
+            <p>Benefits, scalability, elasticity, high availability, fault tolerance, pay-as-you-go model.</p>
+            <p class="example-highlight">Types: Public, Private, Hybrid, Multi-Cloud. Service models: IaaS, PaaS, SaaS, Serverless.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 5: Choose a Cloud Provider</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Amazon Web Services (AWS)</h4>
+            <p>Largest market share and best learning ecosystem. Recommended for beginners.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Microsoft Azure</h4>
+            <p>Strong in enterprise companies and Microsoft ecosystem.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Google Cloud</h4>
+            <p>Strong in AI, ML, and data engineering.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 6: AWS Core Services (Recommended First)</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Identity and Security</h4>
+            <p>IAM users, roles, policies, MFA, security best practices.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Compute</h4>
+            <p>EC2, Auto Scaling, Load Balancers, Lambda basics. Practice launching Linux servers and deploying web apps.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Storage</h4>
+            <p>S3, EBS, EFS, Glacier. Practice backups and lifecycle rules.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Networking</h4>
+            <p>VPC, subnets, route tables, gateways, security groups, NACLs. Build a custom VPC.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Databases</h4>
+            <p>RDS, MySQL/PostgreSQL basics, DynamoDB basics. Host apps with cloud databases.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Monitoring and Logging</h4>
+            <p>CloudWatch, CloudTrail, logging, metrics, alerts, monitoring.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 7: Infrastructure as Code (IaC)</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Tools</h4>
+            <p>Terraform, AWS CloudFormation.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Concepts</h4>
+            <p>Declarative infrastructure, state management, modules.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Practice</h4>
+            <p>Provision infrastructure using Terraform.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 8: Containers and DevOps</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Docker</h4>
+            <p>Images, containers, Dockerfile, Docker Compose. Practice containerizing apps.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Kubernetes</h4>
+            <p>Pods, deployments, services, ingress, scaling. Managed services: EKS, AKS, GKE.</p>
+          </div>
+          <div class="mini-card">
+            <h4>CI/CD</h4>
+            <p>GitHub Actions, Jenkins, GitLab CI/CD. Build pipelines, automated deployment, rolling updates.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 9: Cloud Security</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Core Topics</h4>
+            <p>IAM best practices, encryption, secrets management, zero trust, compliance basics, shared responsibility.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Security Services</h4>
+            <p>AWS KMS, AWS WAF, AWS Shield, Security Hub.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 10: Monitoring, Reliability and Scaling</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Topics</h4>
+            <p>Observability, logging, monitoring, distributed systems basics, auto scaling, disaster recovery, backups, multi-region architecture.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Tools</h4>
+            <p>Prometheus, Grafana, ELK Stack.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 11: Advanced Cloud Engineering</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Advanced Networking</h4>
+            <p>Hybrid networking, Direct Connect, VPN architecture, CDN, DNS architecture.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Advanced Compute</h4>
+            <p>Serverless architecture, event-driven systems, microservices.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Advanced Storage</h4>
+            <p>Data lakes, object lifecycle management, replication strategies.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 12: Specialization Paths</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Cloud Architect</h4>
+            <p>System design, scalability, cost optimization, multi-region systems.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>DevOps Engineer</h4>
+            <p>CI/CD, Kubernetes, automation, monitoring.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Cloud Security Engineer</h4>
+            <p>Security auditing, threat detection, compliance, IAM.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Site Reliability Engineer (SRE)</h4>
+            <p>Reliability, automation, monitoring, incident response.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Data and AI Cloud Engineer</h4>
+            <p>Big data, data pipelines, AI infrastructure, ML services.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 13: Certifications Roadmap</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Beginner</h4>
+            <p>AWS Cloud Practitioner, Azure Fundamentals (AZ-900), Google Cloud Digital Leader.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Intermediate</h4>
+            <p>AWS Solutions Architect Associate, AWS Developer Associate, Azure Administrator, GCP Associate Cloud Engineer.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Advanced</h4>
+            <p>AWS DevOps Engineer Professional, AWS Solutions Architect Professional, Certified Kubernetes Administrator (CKA).</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 14: Real-World Projects</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Beginner Projects</h4>
+            <p>Static website hosting, Linux web server deployment, cloud storage backup system.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Intermediate Projects</h4>
+            <p>3-tier web application, CI/CD deployment pipeline, dockerized application deployment.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Advanced Projects</h4>
+            <p>Kubernetes cluster deployment, multi-region architecture, serverless event-driven application, infrastructure automation platform.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Phase 15: Career Preparation</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card light">
+            <h4>Build Portfolio</h4>
+            <p>GitHub projects, documentation, architecture diagrams.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Interview Skills</h4>
+            <p>Linux questions, networking scenarios, system design basics, cloud troubleshooting.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Resume Strategy</h4>
+            <p>Include certifications, projects, hands-on labs, GitHub links.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lecture-card">
+        <summary>Suggested Learning Order and Beginner Stack</summary>
+        <div class="mini-card-grid">
+          <div class="mini-card">
+            <h4>Suggested Learning Order</h4>
+            <p>Computer Basics, Networking, Linux, Python, Virtualization, Cloud Fundamentals, AWS Basics, Databases, AWS Networking, Security, Terraform, Docker, Kubernetes, CI/CD, Monitoring, Advanced Architecture, Specialization.</p>
+          </div>
+          <div class="mini-card light">
+            <h4>Recommended Beginner Stack</h4>
+            <p>Linux, Networking, Python, AWS, Terraform, Docker, Kubernetes.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand-line">Master the Basics. Build the Future.</div>
+    <div class="footer-links">
+      <a href="index.html" data-hover>Home</a>
+      <a href="about.html" data-hover>About Us</a></li>
+      <a href="learning.html" data-hover>Learning</a></li>
+      <a href="roadmap.html" data-hover>Roadmap</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/noaman-ayub" class="footer-social" data-hover aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@AriseAbility" class="footer-social" data-hover aria-label="YouTube">YT</a>
+      <a href="https://github.com/noamanayub" class="footer-social" data-hover aria-label="GitHub">GH</a>
+    </div>
+    <div class="footer-copy">Copyright 2026 Arise Ability. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arise Ability - Learning</title>
+  <link rel="icon" type="image/png" href="images/logo-transparent.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo" data-hover>
+      <span>ARISE ABILITY</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-hover>Home</a></li>
+      <li><a href="about.html" data-hover>About Us</a></li>
+      <li><a href="learning.html" data-hover>Learning</a></li>
+      <li><a href="roadmap.html" data-hover>Roadmap</a></li>
+    </ul>
+    <button class="nav-mobile-btn" data-hover>Menu</button>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span class="marquee-content"> LECTURE FLOW - THEORY QUESTIONS - CLOUD BASICS - </span>
+        <span class="marquee-content"> LECTURE FLOW - THEORY QUESTIONS - CLOUD BASICS - </span>
+      </div>
+      <div class="marquee-track">
+        <span class="marquee-content"> SECURITY - STORAGE - NETWORKING - GOVERNANCE - </span>
+        <span class="marquee-content"> SECURITY - STORAGE - NETWORKING - GOVERNANCE - </span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">LEARNING HUB.<br><span>LECTURE BY LECTURE.</span></h1>
+      <p class="hero-subtitle">All theory questions from Lecture 1 onward, mapped to the course flow and ready for revision.</p>
+      <a href="#lecture-1" class="btn-primary" data-hover>Jump to Lecture 1</a>
+    </div>
+  </section>
+
+  <section class="lecture-section">
+    <div class="section-header">
+      <h2 class="section-title">Theory Questions</h2>
+      <p class="section-subtitle">Lecture wise theory questions from fundamentals to governance.</p>
+    </div>
+    <div class="lecture-list">
+      <details class="lecture-card" id="lecture-1" open>
+        <summary>Lecture 1: Introduction to Cloud Computing</summary>
+        <ol>
+          <li>What is cloud computing, and how does it differ from traditional on premise computing?</li>
+          <li>List the main characteristics of cloud computing such as elasticity, scalability, and on demand service.</li>
+          <li>Why do organizations migrate to the cloud?</li>
+          <li>Explain the concept of pay as you go billing.</li>
+          <li>Describe real world examples where cloud computing is used.</li>
+        </ol>
+        <p class="lecture-link-wrap">
+          <a class="highlight-link lecture-link" href="lecture/lecture1.html" data-hover>Open Lecture 1 Notes</a>
+        </p>
+      </details>
+
+      <details class="lecture-card" id="lecture-2">
+        <summary>Lecture 2: Cloud Service Models</summary>
+        <ol>
+          <li>Define IaaS, PaaS, and SaaS with one example each.</li>
+          <li>What responsibilities remain with the user in each service model?</li>
+          <li>How does PaaS reduce development effort compared to IaaS?</li>
+          <li>Why is SaaS ideal for non technical users?</li>
+          <li>Compare control and flexibility across the three models.</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card" id="lecture-3">
+        <summary>Lecture 3: Deployment Models</summary>
+        <ol>
+          <li>Differentiate between public, private, hybrid, and community clouds.</li>
+          <li>What are the advantages of a private cloud?</li>
+          <li>When is a hybrid cloud the best option?</li>
+          <li>What risks are associated with a public cloud?</li>
+          <li>Explain the concept of multi cloud strategy.</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card" id="lecture-4">
+        <summary>Lecture 4: Virtualization and Containers</summary>
+        <ol>
+          <li>What is virtualization, and why is it important in cloud computing?</li>
+          <li>Differentiate between virtual machines and containers.</li>
+          <li>What role does a hypervisor play?</li>
+          <li>Why are containers considered lightweight?</li>
+          <li>Give examples of popular container tools.</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card" id="lecture-5">
+        <summary>Lecture 5: Cloud Storage and Databases</summary>
+        <ol>
+          <li>Explain object storage, block storage, and file storage.</li>
+          <li>Why is redundancy important in cloud storage?</li>
+          <li>Describe the difference between SQL and NoSQL databases.</li>
+          <li>What is data replication in the cloud?</li>
+          <li>How does cloud storage help with disaster recovery?</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card" id="lecture-6">
+        <summary>Lecture 6: Cloud Security Fundamentals</summary>
+        <ol>
+          <li>Explain the shared responsibility model.</li>
+          <li>What is IAM and why is it essential?</li>
+          <li>How do encryption and key management protect data?</li>
+          <li>What is multi factor authentication and why is it used?</li>
+          <li>List common cloud security risks.</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card" id="lecture-7">
+        <summary>Lecture 7: Cloud Networking</summary>
+        <ol>
+          <li>Define VPC and explain its purpose.</li>
+          <li>What is the role of subnets in cloud networking?</li>
+          <li>Explain the concept of load balancing.</li>
+          <li>How do security groups and network ACLs differ?</li>
+          <li>What is a CDN and why is it used?</li>
+        </ol>
+      </details>
+
+      <details class="lecture-card" id="lecture-8">
+        <summary>Lecture 8: Governance, Cost, and Compliance</summary>
+        <ol>
+          <li>What is cloud governance and why is it needed?</li>
+          <li>How do tagging and budgets help control cloud costs?</li>
+          <li>Explain the importance of compliance standards like ISO or SOC.</li>
+          <li>What is a cloud service level agreement?</li>
+          <li>Why is cost optimization an ongoing process?</li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <section class="tag-cloud-section" id="tag-cloud">
+    <div class="section-header">
+      <h2 class="section-title">Concept Orbit</h2>
+      <p class="section-subtitle">Rotate the cloud to preview the core learning topics.</p>
+    </div>
+    <div class="tag-cloud-container" id="tag-cloud-container">
+      <div class="tag-cloud" id="tag-cloud-el"></div>
+    </div>
+    <div class="tag-tooltip" id="tag-tooltip">
+      <h4 id="tooltip-title"></h4>
+      <p id="tooltip-desc"></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand-line">Master the Basics. Build the Future.</div>
+    <div class="footer-links">
+      <a href="index.html" data-hover>Home</a>
+      <a href="about.html" data-hover>About Us</a>
+      <a href="learning.html" data-hover>Learning</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/noaman-ayub" class="footer-social" data-hover aria-label="LinkedIn">in</a>
+      <a href="https://www.youtube.com/@noamanayub" class="footer-social" data-hover aria-label="YouTube">YT</a>
+      <a href="https://github.com/noamanayub" class="footer-social" data-hover aria-label="GitHub">GH</a>
+    </div>
+    <div class="footer-copy">Copyright 2026 Arise Ability. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
