@@ -1,6 +1,20 @@
 const cursor = document.getElementById("cursor");
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+document.querySelectorAll("img").forEach((img) => {
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.classList.add("img-blur");
+
+  const markLoaded = () => img.classList.add("is-loaded");
+  if (img.complete) {
+    markLoaded();
+  } else {
+    img.addEventListener("load", markLoaded, { once: true });
+    img.addEventListener("error", markLoaded, { once: true });
+  }
+});
+
 if (cursor && window.innerWidth > 768 && !prefersReduced) {
   let mouseX = 0;
   let mouseY = 0;
