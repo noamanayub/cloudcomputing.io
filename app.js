@@ -1,17 +1,49 @@
 const cursor = document.getElementById("cursor");
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const placeholderSrc = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9'><rect width='16' height='9' fill='%230e1822'/></svg>";
 
-document.querySelectorAll("img").forEach((img) => {
+const imageNodes = document.querySelectorAll("img");
+const imageObserver = "IntersectionObserver" in window
+  ? new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const img = entry.target;
+        const dataSrc = img.getAttribute("data-src");
+        if (dataSrc) {
+          img.src = dataSrc;
+          img.removeAttribute("data-src");
+        }
+        observer.unobserve(img);
+      });
+    }, { rootMargin: "200px" })
+  : null;
+
+imageNodes.forEach((img) => {
   img.loading = "lazy";
   img.decoding = "async";
   img.classList.add("img-blur");
 
-  const markLoaded = () => img.classList.add("is-loaded");
-  if (img.complete) {
+  const markLoaded = () => {
+    if (img.getAttribute("data-src")) return;
+    img.classList.add("is-loaded");
+  };
+
+  img.addEventListener("load", markLoaded, { once: true });
+  img.addEventListener("error", markLoaded, { once: true });
+
+  const dataSrc = img.getAttribute("data-src");
+  if (dataSrc) {
+    if (!img.getAttribute("src")) {
+      img.setAttribute("src", placeholderSrc);
+    }
+    if (imageObserver) {
+      imageObserver.observe(img);
+    } else {
+      img.src = dataSrc;
+      img.removeAttribute("data-src");
+    }
+  } else if (img.complete) {
     markLoaded();
-  } else {
-    img.addEventListener("load", markLoaded, { once: true });
-    img.addEventListener("error", markLoaded, { once: true });
   }
 });
 
